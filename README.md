@@ -48,18 +48,20 @@ Static assets (libraries/plugins/web-fonts) required by the website to run. It p
 
 ## Versions
 
-| Dependency                                               |   Version |
-| :------------------------------------------------------- | --------: |
-| [Clipboard][clipboard]                                   |  `2.0.11` |
+| Dependency                                               | Version   |
+|:---------------------------------------------------------|:---------:|
+| [Clipboard][clipboard]                                   | `2.0.11`  |
 | [Day.js][dayjs]                                          | `1.11.13` |
-| [Font Awesome Free][fontawesome]                         |   `6.7.1` |
-| [GLightbox][glightbox]                                   |   `3.3.0` |
-| [Loading-attribute-polyfill][loading-attribute-polyfill] |   `2.1.1` |
-| [Mermaid][mermaid]                                       |  `11.4.0` |
-| [Simple-Jekyll-Search][simple-jekyll-search]             |  `1.10.0` |
-| [Tocbot][tocbot]                                         |  `4.32.2` |
+| [Font Awesome Free][fontawesome]                         | `6.7.1`   |
+| [GLightbox][glightbox]                                   | `3.3.0`   |
+| [Loading-attribute-polyfill][loading-attribute-polyfill] | `2.1.1`   |
+| [Mermaid][mermaid]                                       | `11.4.0`  |
+| [Simple-Jekyll-Search][simple-jekyll-search]             | `1.10.0`  |
+| [Tocbot][tocbot]                                         | `4.32.2`  |
+| [Chart.js][chartjs]                                      | `4.4.9`   |
+| [Waline Client][waline]                                  | `3.5.7`   |
+| Custom Emojis                                            | `0.0.1`   |
 
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy
 
 <!-- deps -->
 
@@ -71,3 +73,5 @@ Static assets (libraries/plugins/web-fonts) required by the website to run. It p
 [mermaid]: https://www.jsdelivr.com/package/npm/mermaid
 [simple-jekyll-search]: https://www.jsdelivr.com/package/npm/simple-jekyll-search
 [tocbot]: https://www.jsdelivr.com/package/npm/tocbot
+[chartjs]: https://cdn.jsdelivr.net/npm/chart.js
+[waline]: https://cdn.jsdelivr.net/npm/@waline/client
