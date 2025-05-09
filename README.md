@@ -1,8 +1,8 @@
-# Static Assets for Chirpy Jekyll Theme
+# Static assets for stevehoang.com
 
 ## Introduction
 
-Static assets (libraries/plugins/web-fonts) required by the [_Chirpy_][chirpy] based website to run. It provides the opportunity to choose self-host assets in production or development mode.
+Static assets (libraries/plugins/web-fonts) required by the website to run. It provides the opportunity to choose self-host assets in production or development mode.
 
 ## Usage
 
