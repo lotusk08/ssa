@@ -8,3 +8,4 @@ updates:
         dependency-type: "production"
     schedule:
       interval: "weekly"
+ 
