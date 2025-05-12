@@ -52,7 +52,6 @@ Static assets (libraries/plugins/web-fonts) required by the website to run. It p
 |:---------------------------------------------------------|:---------:|
 | [Clipboard][clipboard]                                   | `2.0.11`  |
 | [Day.js][dayjs]                                          | `1.11.13` |
-| [Font Awesome Free][fontawesome]                         | `6.7.1`   |
 | [GLightbox][glightbox]                                   | `3.3.0`   |
 | [Loading-attribute-polyfill][loading-attribute-polyfill] | `2.1.1`   |
 | [Mermaid][mermaid]                                       | `11.4.0`  |
@@ -67,7 +66,6 @@ Static assets (libraries/plugins/web-fonts) required by the website to run. It p
 
 [clipboard]: https://www.jsdelivr.com/package/npm/clipboard
 [dayjs]: https://www.jsdelivr.com/package/npm/dayjs
-[fontawesome]: https://fontawesome.com/download
 [loading-attribute-polyfill]: https://www.jsdelivr.com/package/npm/loading-attribute-polyfill
 [glightbox]: https://www.jsdelivr.com/package/npm/glightbox
 [mermaid]: https://www.jsdelivr.com/package/npm/mermaid
