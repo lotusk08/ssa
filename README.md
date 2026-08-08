@@ -51,14 +51,14 @@ Static assets (libraries/plugins/web-fonts) required by the website to run. It p
 | Dependency                                               | Version   |
 |:---------------------------------------------------------|:---------:|
 | [Clipboard][clipboard]                                   | `2.0.11`  |
-| [Day.js][dayjs]                                          | `1.11.13` |
-| [GLightbox][glightbox]                                   | `3.3.0`   |
+| [Day.js][dayjs]                                          | `1.11.21` |
+| [GLightbox][glightbox]                                   | `3.3.1`   |
 | [Loading-attribute-polyfill][loading-attribute-polyfill] | `2.1.1`   |
-| [Mermaid][mermaid]                                       | `11.4.0`  |
+| [Mermaid][mermaid]                                       | `11.16.1` |
 | [Simple-Jekyll-Search][simple-jekyll-search]             | `1.10.0`  |
-| [Tocbot][tocbot]                                         | `4.36.4`  |
-| [Chart.js][chartjs]                                      | `4.4.9`   |
-| [Waline Client][waline]                                  | `3.5.7`   |
+| [Tocbot][tocbot]                                         | `4.36.8`  |
+| [Chart.js][chartjs]                                      | `4.5.1`   |
+| [Waline Client][waline]                                  | `3.15.2`  |
 | Custom Emojis                                            | `0.0.1`   |
 
 
