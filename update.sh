@@ -198,10 +198,15 @@ main() {
     ;;
   esac
 
-  local -a all=(
+  # MathJax is deliberately left out of a bare run. It is pinned at 3.x, and
+  # re-copying it from npm rewrites ~90 files even when the version has not
+  # moved, because npm's build differs byte-for-byte from what is vendored
+  # here. Update it on purpose with `./update.sh mathjax`.
+  local -a default=(
     dayjs clipboard mermaid glightbox tocbot
-    polyfill search chartjs waline mathjax
+    polyfill search chartjs waline
   )
+  local -a all=("${default[@]}" mathjax)
 
   if [[ -n "$target" ]]; then
     local found=false item
@@ -216,9 +221,15 @@ main() {
     "update_${target}"
   else
     local item
-    for item in "${all[@]}"; do
+    for item in "${default[@]}"; do
       "update_${item}"
     done
+
+    # Say so rather than let a package.json bump silently go unvendored.
+    local pinned
+    pinned=$(pkg_version mathjax)
+    echo ""
+    echo "Skipped mathjax (pinned ${pinned}); run './update.sh mathjax' to vendor it."
   fi
 
   echo ""
