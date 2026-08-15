@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Static assets (libraries/plugins/web-fonts) required by the website to run. It provides the opportunity to choose self-host assets in production or development mode.
+Static assets (libraries/plugins) required by the website to run. Web fonts live in the parent repo under `assets/fonts/`. It provides the opportunity to choose self-host assets in production or development mode.
 
 ## Usage
 
