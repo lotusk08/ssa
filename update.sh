@@ -5,10 +5,12 @@
 # Adapted from cotes2020/chirpy-static-assets. Differences that matter here:
 #
 #   * curl instead of wget, and BSD-safe `sed -i ''`, so it runs on macOS.
-#   * This fork renames upstream's directories and files (loading-attribute-
-#     polyfill -> polyfill/, simple-jekyll-search -> search/), so each package
-#     carries an explicit source -> destination map rather than assuming the
-#     npm layout.
+#   * This fork renames upstream's directories and files (simple-jekyll-search
+#     -> search/), so each package carries an explicit source -> destination
+#     map rather than assuming the npm layout.
+#   * Day.js, Clipboard and loading-attribute-polyfill are not vendored: the
+#     site formats dates with Intl, copies with navigator.clipboard, and
+#     relies on native loading="lazy".
 #   * Font Awesome is not vendored. This fork serves icons from a single
 #     sprite in the parent repo (assets/icons.svg).
 #   * Adds chart.js and @waline/client, which upstream does not carry.
@@ -134,19 +136,6 @@ update_mathjax() {
   readme_set_version "MathJax" "$version"
 }
 
-update_dayjs() {
-  vendor dayjs 'Day\.js' dayjs \
-    "dayjs.min.js:dayjs.min.js" \
-    "locale/en.js:locale/en.js" \
-    "plugin/localizedFormat.js:plugin/localizedFormat.js" \
-    "plugin/relativeTime.js:plugin/relativeTime.js"
-}
-
-update_clipboard() {
-  vendor clipboard 'Clipboard' clipboard \
-    "dist/clipboard.min.js:clipboard.min.js"
-}
-
 update_mermaid() {
   vendor mermaid 'Mermaid' mermaid \
     "dist/mermaid.min.js:mermaid.min.js"
@@ -162,13 +151,6 @@ update_tocbot() {
   vendor tocbot 'Tocbot' tocbot \
     "dist/tocbot.min.js:tocbot.min.js" \
     "dist/tocbot.min.css:tocbot.min.css"
-}
-
-# Upstream keeps this in loading-attribute-polyfill/; this fork shortens it.
-update_polyfill() {
-  vendor loading-attribute-polyfill 'Loading-attribute-polyfill' polyfill \
-    "dist/loading-attribute-polyfill.min.css:polyfill.min.css" \
-    "dist/loading-attribute-polyfill.umd.min.js:polyfill.umd.min.js"
 }
 
 # Upstream keeps this in simple-jekyll-search/; this fork shortens it.
@@ -193,7 +175,7 @@ main() {
 
   case "$target" in
   -h | --help)
-    sed -n '3,22p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
+    sed -n '3,24p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
     exit 0
     ;;
   esac
@@ -203,8 +185,7 @@ main() {
   # moved, because npm's build differs byte-for-byte from what is vendored
   # here. Update it on purpose with `./update.sh mathjax`.
   local -a default=(
-    dayjs clipboard mermaid glightbox tocbot
-    polyfill search chartjs waline
+    mermaid glightbox tocbot search chartjs waline
   )
   local -a all=("${default[@]}" mathjax)
 

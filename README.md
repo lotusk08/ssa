@@ -50,10 +50,7 @@ Static assets (libraries/plugins/web-fonts) required by the website to run. It p
 
 | Dependency                                               | Version   |
 |:---------------------------------------------------------|:---------:|
-| [Clipboard][clipboard]                                   | `2.0.11`  |
-| [Day.js][dayjs]                                          | `1.11.21` |
 | [GLightbox][glightbox]                                   | `3.3.1`   |
-| [Loading-attribute-polyfill][loading-attribute-polyfill] | `2.1.1`   |
 | [Mermaid][mermaid]                                       | `11.16.1` |
 | [Simple-Jekyll-Search][simple-jekyll-search]             | `1.10.0`  |
 | [Tocbot][tocbot]                                         | `4.36.8`  |
@@ -64,9 +61,6 @@ Static assets (libraries/plugins/web-fonts) required by the website to run. It p
 
 <!-- deps -->
 
-[clipboard]: https://www.jsdelivr.com/package/npm/clipboard
-[dayjs]: https://www.jsdelivr.com/package/npm/dayjs
-[loading-attribute-polyfill]: https://www.jsdelivr.com/package/npm/loading-attribute-polyfill
 [glightbox]: https://www.jsdelivr.com/package/npm/glightbox
 [mermaid]: https://www.jsdelivr.com/package/npm/mermaid
 [simple-jekyll-search]: https://www.jsdelivr.com/package/npm/simple-jekyll-search
